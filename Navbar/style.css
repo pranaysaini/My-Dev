@@ -1,0 +1,120 @@
+body{
+    font-family: "Poppins";
+    font-size: 18px;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background: #1a2027;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+
+nav{
+    width: 100%;
+    box-shadow: 0 0 18px rgb(0 0 0/50%);
+}
+
+.menu{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+}
+
+.menu li{
+    display: inline-block;
+    /* height: 90px; */
+    margin-right: 20px;
+}
+
+.submenu:hover{
+    height: 85px;
+   
+    
+}
+
+.menu>li:hover>a{
+    color: #3e95ff;
+}
+
+.menu>li:hover>a::before{
+    visibility: hidden;
+    scale: 1 1;
+    width: 100%;
+}
+
+.submenu{
+    overflow: hidden;
+    position: absolute;
+    left: 600px;
+    right: 50px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 20% ;
+    height: 10;
+    background: #3e95ff;
+    line-height: 40px;
+    box-sizing: border-box;
+    transition: height 0.3s ease-in-out;
+}
+
+.menu li .submenu a{
+    color: #fff;
+    opacity: 0;
+    font-size: 16px;
+    transition: opacity 0.25s;
+    left: 75px;
+   
+}
+
+
+
+.menu > li:hover .submenu a{
+    opacity: 1;
+    transition: height 0.3s ease-in-out;
+}
+
+.menu > li .submenu a:hover{
+    background: rgb(0 0 0 / 20%);
+    
+    
+}
+
+.menu>li a{
+    color: #999;
+    position: relative;
+    height: 100%;
+}
+
+
+
+.menu > li > a::before{
+    content: "";
+    overflow: hidden;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    bottom: 3px;
+    left: 0px;
+    background: #3e95ff;
+    transition: all 0.2s ease-in-out;
+    scale: 0 0;
+    visibility: hidden;
+    transition: height 0.3s ease-in-out;
+
+}
+
+.menu > li:hover .submenu {
+    display: block;
+    transition: all 0.2s ease-in-out;
+}
